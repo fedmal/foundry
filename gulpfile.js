@@ -49,6 +49,7 @@ let $ = gulpLoadPlugins({
 		'imagemin-mozjpeg',
 		'merge-stream',
 		'postcss-reporter',
+		'gulp-rigger',
 		'postcss-scss',
 		'stylelint',
 		'uglifyjs-webpack-plugin',
@@ -250,16 +251,9 @@ gulp.task('js', () => {
 
 
 gulp.task('libs', function() {
-	return gulp.src([
-		'src/libs/jquery/dist/jquery.min.js',
-		'src/libs/svg4everybody-master/dist/svg4everybody.js',
-		'src/libs/svg4everybody-master/dist/svg4everybody.legacy.js',
-		'src/libs/fancybox-master/dist/jquery.fancybox.js',
-		
-
-		])
-	.pipe(concat('libs.min.js'))
-	.pipe(gulp.dest('build/js'))
+	return gulp.src('src/js/vendor.js')
+		.pipe($.rigger())
+		.pipe(gulp.dest('build/js'));
 });
 
 gulp.task('lint:pug', () => {
@@ -340,9 +334,9 @@ gulp.task('watch', () => {
 
 	gulp.watch('src/scss/**/*.scss', gulp.series('scss'));
 
-	gulp.watch('src/libs/**/*.js', gulp.series('js'));
+	gulp.watch('src/libs/**/*.js', gulp.series(['libs', 'js']));
 
-	gulp.watch('src/js/**/*.js', gulp.series('js'));
+	gulp.watch('src/js/**/*.js', gulp.series(['libs', 'js']));
 
 
 });

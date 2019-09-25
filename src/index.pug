@@ -28,7 +28,8 @@ block content
 						li.btn-list__item
 							a(href="#").btn.btn_width_190.btn-primary
 								| View Services
-		
+			.hero__shape
+				img(src="images/bg/hero-wawe_bg.png", alt="")
 		.services.main_services
 			.container
 				h2.title.text-lg.services__title
@@ -195,19 +196,30 @@ block content
 										.footer-widget
 											h3.footer-widget__title
 												| Contact Us
-											ul.footer-widget__conatcts
-												li
+											ul.footer-contact
+												li.footer-contact__item
 													i.icon.fa.fa-phone
-													a(href="#") 0800 267 894
-												li
+													span.footer-contact__text
+														a(href="tel:0800 267 894") 0800 267 894
+												li.footer-contact__item
 													i.icon.fa.fa-envelope-o
-													a(href="#") hello@foundry.nz
-												li
+													span.footer-contact__text
+														a(href="mailto:hello@foundry.nz") hello@foundry.nz
+												li.footer-contact__item
 													i.icon.fa.fa-map-marker
-													| 12 Madden Street, Wynyard Quarter Auckland 1010
+													span.footer-contact__text
+														| 12 Madden Street, Wynyard Quarter Auckland 1010
 
 			.footer-bottom
-				//- © 2019 Foundry Digital Limited. All rights reserved.
-
-				//- Terms & Conditions  |  Privacy  |  Sitemap
+				.container
+					.footer-bottom__inner
+						p
+							| © 2019 Foundry Digital Limited. All rights reserved.
+						ul.footer-bottom__nav
+							li
+								a(href="#") Terms & Conditions
+							li
+								a(href="#") Privacy
+							li
+								a(href="#") Sitemap
 		include pug/footer    

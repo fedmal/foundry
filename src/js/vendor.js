@@ -1,2 +1,2 @@
 //= vendor/jquery/dist/jquery.min.js
-//= vendor/typer/typer.js
+//= vendor/typer/jquery.typer.js

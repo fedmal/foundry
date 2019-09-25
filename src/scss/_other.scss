@@ -459,12 +459,12 @@
 }
 
 .form-control {
-	border-radius: 5px;
-	margin-bottom: 30px;
+	border-radius: 9px;
+	margin-bottom: 15px;
 	background-color: #f8f8f8!important;
-	height: 60px;
+	height: 55px;
 	border: 1px solid #e4e4e4;
-	padding: 15px 32px;
+	padding: 15px 23px;
 	font-size: 15px; 
 	box-shadow: none!important;  
 	color: #335168;
@@ -472,32 +472,24 @@
 		margin-bottom: 25px;
 	}
 	&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-	  color: #6b6b6b;
-	  opacity: .5;
-	  font-family: $DBOLD; 
-	  font-size: 15px;
-	  text-transform: uppercase;
+	  color: #676767;
+	  opacity: 1; 
+	  font-size: 17px;
 	}
 	&::-moz-placeholder { /* Firefox 19+ */
-	  color: #6b6b6b;
-	  opacity: .5;
-	  font-family: $DBOLD;
-	  font-size: 15px;
-	  text-transform: uppercase;
+	  color: #676767;
+	  opacity: 1;
+	  font-size: 17px;
 	}
 	&:-ms-input-placeholder { /* IE 10+ */
-	  color: #6b6b6b;
-	  opacity: .5;
-	  font-family: $DBOLD;
-	  font-size: 15px;
-	  text-transform: uppercase;
+	  color: #676767;
+	  opacity: 1;
+	  font-size: 17px;
 	}
 	&:-moz-placeholder { /* Firefox 18- */
-	  color: #6b6b6b;
-	  opacity: .5;
-	  font-family: $DBOLD;
-	  font-size: 15px;
-	  text-transform: uppercase;
+	  color: #676767;
+	  opacity: 1;
+	  font-size: 17px;
 	}
 }
 

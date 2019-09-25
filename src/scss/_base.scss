@@ -59,18 +59,50 @@ a {
   overflow: hidden;
 }
 
-.header {
-  position: absolute;
-  left: 0;
-  top: 0;
+.site-header {
   width: 100%;
-  z-index: 100;
+  margin: 0;
+  padding: 0;
+  // min-height: 122px;
+  &.fixed {
+    background-color: #fff;
+    .default-logo {
+      display: none;
+    }
+    .sticky-logo {
+      display: block;
+    }
+    .header__content {
+      padding-bottom: 25px;
+    }
+    .main-menu {
+      & > li {
+        & > a {
+          color: #010101;
+        }
+      }
+    }
+  }
+}
+
+.sticky-logo {
+  display: none;
+}
+
+.header-fixed {
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 3;
 }
 
 .header__content {
   display: flex;
   justify-content: space-between;
   padding-top: 25px;
+  padding-bottom: 15px;
+  transition: padding .3s ease;
 }
 
 .main-menu {
@@ -118,6 +150,11 @@ a {
 
 .hero__title {
   margin-bottom: 4px;
+  span {
+    line-height: 84px;
+    font-size: 55px;
+  }
+  
 }
 
 .hero__desc {

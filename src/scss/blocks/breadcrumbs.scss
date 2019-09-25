@@ -1,0 +1,15 @@
+.breadcrumb {
+  padding-top: 21px;
+  font-size: 14px;
+  background-color: transparent;
+  color: #565656;
+  justify-content: flex-end;
+
+  a {
+    color: inherit;
+  }
+
+  &-item.active {
+    color: #fa0556;
+  }
+}

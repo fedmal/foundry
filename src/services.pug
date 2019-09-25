@@ -1,0 +1,67 @@
+extends pug/base
+
+append vars
+	-
+		var body = {
+			classList: ["main-page"]
+		}
+
+
+block content
+	.main-wrap
+		//- .site__layer
+		include pug/header
+		.services.pt-0
+			.container
+				include pug/breadcrumbs
+				.row.justify-content-between.align-items-center
+					.col-lg-7
+						h2.title.text-lg.services__title.text-left
+							i.fa.fa-desktop
+							|Strategy & Consulting
+						.just-text
+							p
+								strong Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tortor enim, auctor eu leo id, convallis porta eros. 
+							p Vestibulum condimentum neque quam, id efficitur diam laoreet non. Praesent ultricies condimentum neque, non ultricies nulla tempor sit amet. Donec et odio eget elit dignissim condimentum.
+						a.btn.btn-outline-black.mr-2(href="#") Learn More
+							i.fa.fa-arrow-right
+						a.btn.btn-primary(href="#") Enquire
+					.col-lg-4
+						ul.service-inc
+							li.service-inc__item.service-inc__item--caption Services Include
+							li.service-inc__item Digital Strategy
+							li.service-inc__item Solution Architecture
+							li.service-inc__item Customer Experience Strategy
+		.services.bg-gray
+			.container
+				.row.justify-content-between.align-items-center
+					.col-lg-4
+						ul.service-inc
+							li.service-inc__item.service-inc__item--caption Services Include
+							li.service-inc__item User Experience (UX)
+							li.service-inc__item UI Design
+							li.service-inc__item Web Development
+							li.service-inc__item CMS Delivery
+							li.service-inc__item Mobile App Development
+					.col-lg-7
+						h2.title.text-lg.services__title.text-left
+							i.fa.fa-desktop
+							|Design & Build
+						.just-text
+							p
+								strong Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tortor enim, auctor eu leo id, convallis porta eros. 
+							p Vestibulum condimentum neque quam, id efficitur diam laoreet non. Praesent ultricies condimentum neque, non ultricies nulla tempor sit amet. Donec et odio eget elit dignissim condimentum.
+						a.btn.btn-outline-black.mr-2(href="#") Learn More
+							i.fa.fa-arrow-right
+						a.btn.btn-primary(href="#") Enquire
+						.logos
+							h3.text-sm.logos__title CMS Platforms
+							ul.logos__list
+								li
+									picture
+
+      
+		
+		
+
+		include pug/footer    

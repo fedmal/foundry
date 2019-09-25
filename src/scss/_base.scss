@@ -115,6 +115,9 @@ a {
       font-family: 'Muli', sans-serif;
     }
   }
+  @include max-1024 {
+    display: none;
+  }
 }
 
 .hero {

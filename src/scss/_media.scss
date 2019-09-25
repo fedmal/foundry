@@ -15,6 +15,9 @@
     // @include max-xl
     $max-xl-width: 1199px;
     // @include max-1300
+    $max-1024-width: 1024px;
+    // @include max-1024
+
     $max-1300-width: 1300px;
     // @include max-1400
     $max-1400-width: 1400px;
@@ -64,6 +67,12 @@
         @content;
       }
     }
+    @mixin max-1024 {
+      @media (max-width: #{$max-1024-width}) {
+        @content;
+      }
+    }
+
     @mixin max-xl {
       @media (max-width: #{$max-xl-width}) {
         @content;
@@ -109,7 +118,9 @@
     $min-lg-width: 992px;
     // @include min-xl
     $min-xl-width: 1200px;
-    // @include min-1300
+    // @include min-1024
+    $min-1024-width: 1024px;
+    // @include min-1400
     $min-1300-width: 1300px;
     // @include min-1400
     $min-1400-width: 1400px;
@@ -156,6 +167,11 @@
     }
     @mixin min-1300 {
       @media (min-width: #{$min-1300-width}) {
+        @content;
+      }
+    }
+    @mixin min-1024 {
+      @media (min-width: #{$min-1024-width}) {
         @content;
       }
     }

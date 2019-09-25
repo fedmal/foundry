@@ -11,12 +11,12 @@ block content
 	.main-wrap
 		//- .site__layer
 		include pug/header
-		.services.pt-0
+		section.service.pt-0
 			.container
 				include pug/breadcrumbs
 				.row.justify-content-between.align-items-center
 					.col-lg-7
-						h2.title.text-lg.services__title.text-left
+						h2.title.text-lg.service__title.text-left
 							i.fa.fa-desktop
 							|Strategy & Consulting
 						.just-text
@@ -32,7 +32,7 @@ block content
 							li.service-inc__item Digital Strategy
 							li.service-inc__item Solution Architecture
 							li.service-inc__item Customer Experience Strategy
-		.services.bg-gray
+		section.service.bg-gray
 			.container
 				.row.justify-content-between.align-items-center
 					.col-lg-4
@@ -44,7 +44,7 @@ block content
 							li.service-inc__item CMS Delivery
 							li.service-inc__item Mobile App Development
 					.col-lg-7
-						h2.title.text-lg.services__title.text-left
+						h2.title.text-lg.service__title.text-left
 							i.fa.fa-desktop
 							|Design & Build
 						.just-text
@@ -57,8 +57,40 @@ block content
 						.logos
 							h3.text-sm.logos__title CMS Platforms
 							ul.logos__list
-								li
-									picture
+								li.logos__item
+									img(src="images/wordpress.png" srcset="images/wordpress.png, images/wordpress@2x.png 2x, images/wordpress@3x.png 3x")
+								li.logos__item
+									img(src="images/silverstripe.png" srcset="images/silverstripe.png, images/silverstripe@2x.png 2x, images/silverstripe@3x.png 3x")
+								li.logos__item
+									img(src="images/concrete5.png" srcset="images/concrete5.png, images/concrete5@2x.png 2x, images/concrete5@3x.png 3x")
+		section.service
+			.container
+				.row.justify-content-between.align-items-center
+					.col-lg-7
+						h2.title.text-lg.service__title.text-left
+							i.fa.fa-desktop
+							| eCommerce
+						.just-text
+							p
+								strong Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tortor enim, auctor eu leo id, convallis porta eros. 
+							p Vestibulum condimentum neque quam, id efficitur diam laoreet non. Praesent ultricies condimentum neque, non ultricies nulla tempor sit amet. Donec et odio eget elit dignissim condimentum.
+						a.btn.btn-primary(href="#") Enquire
+						.logos
+							ul.logos__list
+								li.logos__item
+									img(src="images/magento.png" srcset="images/magento.png, images/magento@2x.png 2x, images/magento@3x.png 3x")
+								li.logos__item
+									img(src="images/shopify.png" srcset="images/shopify.png, images/shopify@2x.png 2x, images/shopify@3x.png 3x")
+								li.logos__item
+									img(src="images/bigcommerce.png" srcset="images/bigcommerce.png, images/bigcommerce@2x.png 2x, images/bigcommerce@3x.png 3x")
+					.col-lg-4
+						ul.service-inc
+							li.service-inc__item.service-inc__item--caption Services Include
+							li.service-inc__item Build
+							li.service-inc__item Migrations & Upgrades
+							li.service-inc__item Integrations
+							li.service-inc__item Conversion Rate Optimisation
+							li.service-inc__item Automation
 
       
 		

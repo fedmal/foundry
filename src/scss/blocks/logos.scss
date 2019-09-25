@@ -1,0 +1,22 @@
+.logos {
+  padding-top: 30px;
+  color: #090909;
+
+  &__title {
+    margin-bottom: 12px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin: 0 30px 10px 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

@@ -59,6 +59,33 @@ a {
   overflow: hidden;
 }
 
+.logo {
+  @include max-1024 {
+    max-width: 165px;
+  }
+}
+
+.header-toolbar {
+  display: flex;
+  margin-left: -14px;
+  margin-right: -14px;
+  li {
+    padding-left: 14px;
+    padding-right: 14px;
+    .icon {
+      font-size: 30px;
+      color: #fff;
+      transition: all .3s;
+    }
+  }
+  .header-toolbar__tel {
+    .icon {
+      position: relative;
+      top: 2px;
+    }
+  }
+}
+
 .site-header {
   width: 100%;
   margin: 0;
@@ -80,6 +107,18 @@ a {
         & > a {
           color: #010101;
         }
+      }
+    }
+    .header-toolbar {
+      li {
+        .icon {
+          color: #000;
+        }
+      }
+    }
+    .navbar-toggler {
+      span {
+        background-color: #000;
       }
     }
   }
@@ -156,8 +195,11 @@ a {
   span {
     line-height: 84px;
     font-size: 55px;
+    @include max-1024 {
+      font-size: 50px;
+    }
   }
-  
+
 }
 
 .hero__desc {
@@ -335,6 +377,9 @@ a {
 .footer-top {
   padding-top: 95px;
   padding-bottom: 100px;
+  @include max-1024 {
+    display: none;
+  }
 }
 
 .footer-widget__title {
@@ -386,6 +431,10 @@ a {
 .footer-bottom__inner {
   display: flex;
   justify-content: space-between;
+  @include max-1024 {
+    display: block;
+    text-align: center;
+  }
 }
 
 .footer-bottom {
@@ -397,6 +446,9 @@ a {
 
 .footer-bottom__nav {
   display: flex;
+  @include max-1024 {
+    display: none;
+  }
   li {
     a {
       font-size: 13px;

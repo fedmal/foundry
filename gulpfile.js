@@ -209,6 +209,7 @@ gulp.task('scss', () => {
 	return gulp.src([
 		'src/scss/*.scss',
 		'!src/scss/_*.scss',
+		'!src/scss/response.scss',
 	])
 		.pipe($.plumber({
 			errorHandler,
@@ -236,12 +237,48 @@ gulp.task('scss', () => {
 				}),
 		]))
 		.pipe($.sourcemaps.write('.'))
-		// .pipe(cssunit({
-  //     type     :    'px-to-rem',
-  //     rootSize :    16
-		// }))
+		.pipe(cssunit({
+      type     :    'px-to-rem',
+      rootSize :    16
+		}))
 		.pipe(gulp.dest('build/css'));
 });
+
+gulp.task('scss-response', () => {
+	return gulp.src([
+		'src/scss/response.scss',
+	])
+		.pipe($.plumber({
+			errorHandler,
+		}))
+		.pipe($.if(argv.debug, $.debug()))
+		.pipe($.sourcemaps.init())
+		.pipe($.sass().on('error', $.sass.logError))
+		.pipe($.postcss([
+			argv.minifyCss ?
+				$.cssnano({
+					autoprefixer: {
+						add: true,
+						browsers: ['> 0%'],
+					},
+					calc: true,
+					discardComments: {
+						removeAll: true,
+					},
+					zindex: false,
+				})
+				:
+				$.autoprefixer({
+					add: true,
+					browsers: ['> 0%'],
+				}),
+		]))
+		.pipe($.sourcemaps.write('.'))
+
+		.pipe(gulp.dest('build/css'));
+});
+
+
 
 gulp.task('js', () => {
 	return gulp.src('src/js/main.js')
@@ -333,6 +370,7 @@ gulp.task('watch', () => {
 		});
 
 	gulp.watch('src/scss/**/*.scss', gulp.series('scss'));
+	gulp.watch('src/scss/**/*.scss', gulp.series('scss-response'));
 
 	gulp.watch('src/libs/**/*.js', gulp.series(['libs', 'js']));
 
@@ -409,6 +447,7 @@ gulp.task('build', gulp.parallel(
 	'sprites:svg',
 	'pug',
 	'scss',
+	'scss-response',
 	'libs',
 	'js'
 ));

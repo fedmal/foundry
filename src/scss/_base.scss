@@ -92,6 +92,19 @@ a {
   padding-bottom: 0;
 }
 
+
+.hero__shape {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  line-height: 0;
+  bottom: -1px;
+  img {
+    width: 100%;
+  }
+}
+
 .hero {
   position: relative;
   width: 100%;
@@ -311,5 +324,54 @@ a {
 .footer-widget__menu {
   li {
     margin-bottom: 8px;
+  }
+}
+
+.footer-contact {
+ .footer-contact__item {
+  overflow: hidden;
+  margin-bottom: 20px;
+  .footer-contact__text {
+    display: block;
+    padding-left: 37px;
+  }
+  .icon {
+    float: left;
+    font-size: 20px;
+    color: #fff;
+  }
+ }
+}
+
+.footer-bottom__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-bottom {
+  background-color: #151515;
+  padding-top: 30px;
+  padding-bottom: 17px;
+  font-size: 13px;
+}
+
+.footer-bottom__nav {
+  display: flex;
+  li {
+    a {
+      font-size: 13px;
+      color: #fff;
+    }
+    & + li {
+    
+      &::before {
+        content: '|';
+        display: inline-block;
+        padding: 0 7px 0;
+        color: #fff;
+        position: relative;
+        top: 1px;
+      }
+    }
   }
 }

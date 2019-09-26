@@ -388,7 +388,7 @@
 
 .lead {
 	font-size: 36px;
-	@include max-1024 {
+	@include max-lg {
 		font-size: 32px;
 	}
 }

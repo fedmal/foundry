@@ -60,7 +60,7 @@ a {
 }
 
 .logo {
-  @include max-1024 {
+  @include max-lg {
     max-width: 165px;
   }
 }
@@ -69,7 +69,7 @@ a {
   display: none;
   margin-left: -14px;
   margin-right: -14px;
-  @include max-1024 {
+  @include max-lg {
     display: flex;
   }
   li {
@@ -215,7 +215,7 @@ a {
       position: relative;
     }
   }
-  @include max-1024 {
+  @include max-lg {
     z-index: 10000;
     position: fixed;
     margin-top: 0;
@@ -327,13 +327,13 @@ a {
 
 .hero__shape__mob {
   display: none;
-  @include max-1024 {
+  @include max-lg {
     display: block;
   }
 }
 
 .hero__shape__default {
-  @include max-1024 {
+  @include max-lg {
     display: none;
   }
 }
@@ -351,13 +351,13 @@ a {
 
 .hero__title {
   margin-bottom: 4px;
-  @include max-1024 { 
+  @include max-lg { 
     min-height: 130px;
   }
   span {
     line-height: 84px;
     font-size: 55px;
-    @include max-1024 {
+    @include max-lg {
       font-size: 50px;
       line-height: 60px;
     }
@@ -395,7 +395,7 @@ a {
   margin-bottom: 40px;
   max-width: 480px;
   width: 100%;
-  @include max-1024 {
+  @include max-lg {
     margin-bottom: 20px;
   }
 }
@@ -403,13 +403,13 @@ a {
 .service-box__icon {
   min-width: 55px;
   margin-right: 15px;
-  @include max-1024 {
+  @include max-lg {
     min-width: 30px;
   }
   .icon {
     font-size: 40px;
     color: #f9054c;
-    @include max-1024 {
+    @include max-lg {
       font-size: 25px;
     }
   }
@@ -417,7 +417,7 @@ a {
 
 .service-box__info {
   flex: 1;
-  @include max-1024 {
+  @include max-lg {
     padding-top: 3px;
     p {
       display: none;
@@ -506,7 +506,7 @@ a {
 
 
 .main_work {
-  @include max-1024 {
+  @include max-lg {
     .work-grid__col {
       min-width: 100%;
       padding-left: 0;
@@ -540,7 +540,7 @@ a {
 }
 
 .help-feedback__slide {
-  @include max-1024 {
+  @include max-lg {
     display: none;
   }
 }
@@ -582,7 +582,7 @@ a {
 .footer-top {
   padding-top: 95px;
   padding-bottom: 100px;
-  @include max-1024 {
+  @include max-lg {
     display: none;
   }
 }
@@ -636,7 +636,7 @@ a {
 .footer-bottom__inner {
   display: flex;
   justify-content: space-between;
-  @include max-1024 {
+  @include max-lg {
     display: block;
     text-align: center;
   }
@@ -651,7 +651,7 @@ a {
 
 .footer-bottom__nav {
   display: flex;
-  @include max-1024 {
+  @include max-lg {
     display: none;
   }
   li {

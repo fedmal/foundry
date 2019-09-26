@@ -289,6 +289,16 @@
 	}
 }
 
+.btn-outline-primary {
+  border: 2px solid #fa0556;
+  color: #fa0556;
+  background-color: transparent;
+  &:hover, &:active, &:focus {
+    background-color: transparent;
+    color: #fa0556;
+  }
+}
+
 .btn-outline-white {
 	border: 2px solid #fff;
 	color: #fff;
@@ -308,12 +318,19 @@
 // 	color: #fff;
 // }
 
+.btn_width_182 {
+  min-width: 182px;
+}
+
 .btn_width_190 {
 	min-width: 190px;
 }
 
 .btn_width_300 {
 	min-width: 300px;
+	@include max-lg {
+		min-width: 425px;
+	}
 }
 
 .container {
@@ -341,9 +358,9 @@
 
 .text-lg {
 	font-size: 48px;
-	// @include max-xl {
-	// 	font-size: 36px;
-	// }
+	@include max-lg {
+		font-size: 50px;
+	}
 	// @include max-md {
 	// 	font-size: 28px;
 	// }
@@ -374,7 +391,7 @@
 
 .lead {
 	font-size: 36px;
-	@include max-1024 {
+	@include max-lg {
 		font-size: 32px;
 	}
 }
@@ -580,6 +597,9 @@ textarea.form-control {
 .title {
 	text-align: center;
 	font-weight: 600;
+	@include max-lg {
+		text-align: left;
+	}
 }
 
 .title_decor {
@@ -625,3 +645,18 @@ textarea.form-control {
 	overflow: hidden;
 }
 
+.site__layer {
+	transform: scale3d(1, 0, 1);
+	transform-origin: top;
+	transition: transform 0.4s cubic-bezier(0.43, 0.77, 0.33, 0.96);
+	position: fixed;
+	background: rgba(#000,.1);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 999; 
+	&.active {
+		transform: scale3d(1, 1, 1);
+	}
+}

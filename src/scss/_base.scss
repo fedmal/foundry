@@ -60,7 +60,7 @@ a {
 }
 
 .logo {
-  @include max-1024 {
+  @include max-lg {
     max-width: 165px;
   }
 }
@@ -69,7 +69,7 @@ a {
   display: none;
   margin-left: -14px;
   margin-right: -14px;
-  @include max-1024 {
+  @include max-lg {
     display: flex;
   }
   li {
@@ -136,7 +136,7 @@ a {
   left: 0;
   width: 100%;
   position: fixed;
-  z-index: 3;
+  z-index: 999999;
 }
 
 .header__content {
@@ -215,8 +215,8 @@ a {
       position: relative;
     }
   }
-  @include max-1024 {
-    z-index: 1000;
+  @include max-lg {
+    z-index: 10000;
     position: fixed;
     margin-top: 0;
     padding: 60px 30px 30px;
@@ -325,6 +325,19 @@ a {
   }
 }
 
+.hero__shape__mob {
+  display: none;
+  @include max-lg {
+    display: block;
+  }
+}
+
+.hero__shape__default {
+  @include max-lg {
+    display: none;
+  }
+}
+
 .hero {
   position: relative;
   width: 100%;
@@ -338,11 +351,15 @@ a {
 
 .hero__title {
   margin-bottom: 4px;
+  @include max-lg { 
+    min-height: 130px;
+  }
   span {
     line-height: 84px;
     font-size: 55px;
-    @include max-1024 {
+    @include max-lg {
       font-size: 50px;
+      line-height: 60px;
     }
   }
 
@@ -362,6 +379,16 @@ a {
     border-bottom: 1px solid #ededed;
     padding-bottom: 120px;
     margin-bottom: 90px;
+    @include max-lg {
+      border-bottom: 0;
+      margin-bottom: 120px;
+      padding-bottom: 0; 
+    }
+    .services-grid {
+      @include max-lg {
+        margin-bottom: 40px;
+      }
+    }
   }
 }
 
@@ -378,19 +405,35 @@ a {
   margin-bottom: 40px;
   max-width: 480px;
   width: 100%;
+  @include max-lg {
+    margin-bottom: 20px;
+  }
 }
 
 .service-box__icon {
   min-width: 55px;
   margin-right: 15px;
+  @include max-lg {
+    min-width: 30px;
+  }
   .icon {
     font-size: 40px;
     color: #f9054c;
+    @include max-lg {
+      font-size: 25px;
+    }
   }
 }
 
 .service-box__info {
   flex: 1;
+  @include max-lg {
+    padding-top: 3px;
+    p {
+      display: none;
+    }
+
+  }
 }
 
 .services-grid__row {
@@ -421,6 +464,10 @@ a {
 }
 
 .work-box {
+  max-width: 516px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 40px;
 }
 
@@ -468,6 +515,25 @@ a {
 }
 
 
+.main_work {
+  @include max-lg {
+    .work-grid__col {
+      min-width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .work-grid__row { 
+      display: block;
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 30px;
+      padding-right: 30px;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+
 
 .help-feedback {
   background: rgba(215,31,43,1);
@@ -484,7 +550,7 @@ a {
 }
 
 .help-feedback__slide {
-  @include max-1024 {
+  @include max-lg {
     display: none;
   }
 }
@@ -498,17 +564,21 @@ a {
 }
 
 .help-feedback__title {
-
+  margin-bottom: 35px;
+  @include max-lg {
+    font-size: 50px;
+    margin-bottom: 15px;
+  }
 }
 
 .help-feedback__subtitle {
   font-size: 20px;
   margin-bottom: 47px;
+  @include max-lg {
+    font-size: 32px;
+  }
 }
 
-.help-feedback__title {
-  margin-bottom: 35px;
-}
 
 .help-feedback-form__btn {
   margin-top: 23px;
@@ -526,7 +596,7 @@ a {
 .footer-top {
   padding-top: 95px;
   padding-bottom: 100px;
-  @include max-1024 {
+  @include max-lg {
     display: none;
   }
 }
@@ -580,7 +650,7 @@ a {
 .footer-bottom__inner {
   display: flex;
   justify-content: space-between;
-  @include max-1024 {
+  @include max-lg {
     display: block;
     text-align: center;
   }
@@ -591,11 +661,14 @@ a {
   padding-top: 30px;
   padding-bottom: 17px;
   font-size: 13px;
+  @include max-lg {
+    font-size: 22px;
+  }
 }
 
 .footer-bottom__nav {
   display: flex;
-  @include max-1024 {
+  @include max-lg {
     display: none;
   }
   li {
@@ -616,3 +689,67 @@ a {
     }
   }
 }
+
+.slick-dots {
+  li {
+    width: auto;
+    height: auto;
+    padding: 0 4px;
+    margin: 0;
+
+    button {
+      width: 12px;
+      height: 12px;
+      content: '';
+      background-color: #303131;
+      border-radius: 50%;
+      &::before {
+        display: none;
+      }
+    }
+    &.slick-active {
+      button {
+        background-color: #a19d9d;
+      }
+    }
+  }
+}
+
+.our-work-carousel {
+  .slick-dots {
+    position: static;
+    margin: 0;
+  }
+  .slick-prev, .slick-next {
+    margin-top: -50px;
+  }
+}
+
+.slick-prev.slick-disabled::before, .slick-next.slick-disabled::before {
+    opacity: 0.25;
+}
+.slick-next {
+  right: 0;
+  &::before {
+    content: "\f105";
+  }
+}
+.slick-prev {
+  left: 0;
+  &::before {
+    content: "\f104";
+  }
+}
+
+
+.slick-prev::before, .slick-next::before {
+    font-family: "FontAwesome";
+    font-size: 40px;
+    line-height: 1;
+    color: #000;
+    opacity: 1;
+    z-index: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+

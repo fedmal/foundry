@@ -9,7 +9,23 @@ append vars
 
 block content
 	.main-wrap
-		//- .site__layer
+		.site__layer
+		.main-menu-mob
+			.main-menu__logo
+				img(src="images/foundry-logo-blk.png", alt="")
+			ul.main-menu-mob-list
+				li
+					a(href="") Home
+				li
+					a(href="") Services
+				li
+					a(href="") Work
+				li
+					a(href="") About
+				li
+					a(href="") Contact
+
+
 		include pug/header
 		.hero.page-header
 			.container
@@ -19,29 +35,29 @@ block content
 					p
 						| A sample of some of our recent projects
 
-		section.service.pt-0 
+		main.main-container
 			.container
 				include pug/breadcrumbs
 
-		.work.our_work-page
-			.container
-				.work-grid 
-					.row.work-grid__row.our-work-carousel
-						each work in works
-							.col-lg-6.work-grid__col
-								.work-box
-									.work-box__image
-										img(src="images/work.jpg", alt="")
-										a(href="#").work-box__view
-											span.btn.btn_width_190.btn-outline-white
-												| View Project
-									.work-box__info
-										h3.text-md.work-box__title
-											a(href="#")
-												| Proviz Sports
-										.work-box__text
-											p
-												| Digital Strategy / Solution Architecture / Customer Experience Strategy
+			.work.our_work-page
+				.container
+					.work-grid 
+						.row.work-grid__row.our-work-carousel
+							each work in works
+								.col-lg-6.work-grid__col
+									.work-box
+										.work-box__image
+											img(src="images/work.jpg", alt="")
+											a(href="#").work-box__view
+												span.btn.btn_width_190.btn-outline-white
+													| View Project
+										.work-box__info
+											h3.text-md.work-box__title
+												a(href="#")
+													| Proviz Sports
+											.work-box__text
+												p
+													| Digital Strategy / Solution Architecture / Customer Experience Strategy
 
       
 		

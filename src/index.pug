@@ -49,132 +49,134 @@ block content
 			.hero__shape
 				img(src="images/bg/hero-wawe_bg.png", alt="").hero__shape__default
 				img(src="images/bg/hero-wawe_bg_mob.png", alt="").hero__shape__mob
-					
-		.services.main_services
-			.container
-				h2.title.text-lg.services__title
-					| Our Services
-				.services-grid
-					.row.services-grid__row
-						.col-lg-6.services-grid__col
-							.service-box
-								.service-box__icon
-									i.icon.fa.fa-star-o
-								.service-box__info
-									h3.text-md.service-box__title
-										| Strategy & Consultation
-									p
-										| Digital Strategy / Solution Architecture / Customer Experience Strategy
-
-						.col-lg-6.services-grid__col
-							.service-box
-								.service-box__icon
-									i.icon.fa.fa-television
-								.service-box__info
-									h3.text-md.service-box__title
-										| Design & Build
-									p
-										| UX / UI Design / Development / CMS Delivery / Mobile App Development
-
-						.col-lg-6.services-grid__col
-							.service-box
-								.service-box__icon
-									i.icon.fa.fa-credit-card
-								.service-box__info
-									h3.text-md.service-box__title
-										| eCommerce
-									p
-										| Build / Migrations & Upgrades / Integrations / CRO / Automation
-
-						.col-lg-6.services-grid__col
-							.service-box
-								.service-box__icon
-									i.icon.fa.fa-refresh
-								.service-box__info
-									h3.text-md.service-box__title
-										| Digital Performance Marketing
-									p
-										| Campaign Strategy & Management / SEM / SEO
-
-						.col-lg-6.services-grid__col
-							.service-box
-								.service-box__icon
-									i.icon.fa.fa-cog
-								.service-box__info
-									h3.text-md.service-box__title
-										| Optimisation & Management
-									p
-										| CRO / Performance Optimisation / Hosting / Training / Support
-
-						.col-lg-6.services-grid__col
-							.service-box
-								.service-box__icon
-									i.icon.fa.fa-bar-chart
-								.service-box__info
-									h3.text-md.service-box__title
-										| Data & Intelligence
-									p
-										| Custom Reporting & Analysis / Automation
 
 				
-				.text-center
-					a(href="#").btn.btn-outline-black.btn-all.services__btn.btn_width_300
-						span
-							| View All Services
-							i.icon.fa.fa-arrow-right
+		main.main-container
+			.services.main_services
+				.container
+					h2.title.text-lg.services__title
+						| Our Services
+					.services-grid
+						.row.services-grid__row
+							.col-lg-6.services-grid__col
+								.service-box
+									.service-box__icon
+										i.icon.fa.fa-star-o
+									.service-box__info
+										h3.text-md.service-box__title
+											| Strategy & Consultation
+										p
+											| Digital Strategy / Solution Architecture / Customer Experience Strategy
+
+							.col-lg-6.services-grid__col
+								.service-box
+									.service-box__icon
+										i.icon.fa.fa-television
+									.service-box__info
+										h3.text-md.service-box__title
+											| Design & Build
+										p
+											| UX / UI Design / Development / CMS Delivery / Mobile App Development
+
+							.col-lg-6.services-grid__col
+								.service-box
+									.service-box__icon
+										i.icon.fa.fa-credit-card
+									.service-box__info
+										h3.text-md.service-box__title
+											| eCommerce
+										p
+											| Build / Migrations & Upgrades / Integrations / CRO / Automation
+
+							.col-lg-6.services-grid__col
+								.service-box
+									.service-box__icon
+										i.icon.fa.fa-refresh
+									.service-box__info
+										h3.text-md.service-box__title
+											| Digital Performance Marketing
+										p
+											| Campaign Strategy & Management / SEM / SEO
+
+							.col-lg-6.services-grid__col
+								.service-box
+									.service-box__icon
+										i.icon.fa.fa-cog
+									.service-box__info
+										h3.text-md.service-box__title
+											| Optimisation & Management
+										p
+											| CRO / Performance Optimisation / Hosting / Training / Support
+
+							.col-lg-6.services-grid__col
+								.service-box
+									.service-box__icon
+										i.icon.fa.fa-bar-chart
+									.service-box__info
+										h3.text-md.service-box__title
+											| Data & Intelligence
+										p
+											| Custom Reporting & Analysis / Automation
+
+					
+					.text-center
+						a(href="#").btn.btn-outline-black.btn-all.services__btn.btn_width_300
+							span
+								| View All Services
+								i.icon.fa.fa-arrow-right
 
 
-		.work.main_work
-			.container
-				h2.title.text-lg.work__title
-					| Our Work
+			.work.main_work
+				.container
+					h2.title.text-lg.work__title
+						| Our Work
 
-				.work-grid
-					.row.work-grid__row.our-work-carousel
-						each work in works
-							.col-lg-6.work-grid__col
-								.work-box
-									.work-box__image
-										img(src="images/work.jpg", alt="")
-										a(href="#").work-box__view
-											span.btn.btn_width_190.btn-outline-white
-												| View Project
-									.work-box__info
-										h3.text-md.work-box__title
-											a(href="#")
-												| Proviz Sports
+					.work-grid
+						.row.work-grid__row.our-work-carousel
+							each work in works
+								.col-lg-6.work-grid__col
+									.work-box
+										.work-box__image
+											img(src="images/work.jpg", alt="")
+											a(href="#").work-box__view
+												span.btn.btn_width_190.btn-outline-white
+													| View Project
+										.work-box__info
+											h3.text-md.work-box__title
+												a(href="#")
+													| Proviz Sports
 
-				.text-center
-					a(href="#").btn.btn-outline-black.btn-all.services__btn.btn_width_300
-						span
-							| View All Work
-							i.icon.fa.fa-arrow-right
+					.text-center
+						a(href="#").btn.btn-outline-black.btn-all.services__btn.btn_width_300
+							span
+								| View All Work
+								i.icon.fa.fa-arrow-right
 
 
 
-		.help-feedback
-			.container
-				.help-feedback__inner
+			.help-feedback
+				.container
+					.help-feedback__inner
 
-						h3.help-feedback__title.lead
-							| Let us help you reach your business goals
-						p.help-feedback__subtitle
-							| Arrange a no obligation meeting or call today
-						form(action="#").help-feedback-form
-							.help-feedback__slide
-								.row
-									.col-md-6
-										input.form-control(type="text", placeholder="Your Name*")
-									.col-md-6
-										input.form-control(type="text", placeholder="Your Email*")
-									.col-md-6
-										input.form-control(type="text", placeholder="Phone Number")
-									.col-md-6
-										input.form-control(type="text", placeholder="Company name")
+							h3.help-feedback__title.lead
+								| Let us help you reach your business goals
+							p.help-feedback__subtitle
+								| Arrange a no obligation meeting or call today
+							form(action="#").help-feedback-form
+								.help-feedback__slide
+									.row
+										.col-md-6
+											input.form-control(type="text", placeholder="Your Name*")
+										.col-md-6
+											input.form-control(type="text", placeholder="Your Email*")
+										.col-md-6
+											input.form-control(type="text", placeholder="Phone Number")
+										.col-md-6
+											input.form-control(type="text", placeholder="Company name")
 
-							.text-center
-								button.btn.btn-outline-white.btn-all.help-feedback-form__btn.btn_width_300
-									| Let’s Talk
+								.text-center
+									button.btn.btn-outline-white.btn-all.help-feedback-form__btn.btn_width_300
+										| Let’s Talk
 
 
 

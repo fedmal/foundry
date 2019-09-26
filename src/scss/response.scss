@@ -1,8 +1,8 @@
 @import "media";
 
 
-// @include max-1400 { 
-// 	html {
-// 		font-size: 8px;
-// 	} 
-// }
+@include max-sm { 
+	html {
+		font-size: 12px;
+	} 
+}

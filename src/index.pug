@@ -11,7 +11,7 @@ append vars
 
 block content
 	.main-wrap
-		//- .site__layer
+		.site__layer
 		include pug/header
 		.hero
 			.container
@@ -31,7 +31,9 @@ block content
 							a(href="#").btn.btn_width_190.btn-primary
 								| View Services
 			.hero__shape
-				img(src="images/bg/hero-wawe_bg.png", alt="")
+				img(src="images/bg/hero-wawe_bg.png", alt="").hero__shape__default
+				img(src="images/bg/hero-wawe_bg_mob.png", alt="").hero__shape__mob
+					
 		.services.main_services
 			.container
 				h2.title.text-lg.services__title
@@ -112,9 +114,9 @@ block content
 					| Our Work
 
 				.work-grid
-					.row.work-grid__row
+					.row.work-grid__row.our-work-carousel
 						each work in works
-							.col-md-6.work-grid__col
+							.col-lg-6.work-grid__col
 								.work-box
 									.work-box__image
 										img(src="images/work.jpg", alt="")

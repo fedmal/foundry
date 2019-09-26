@@ -112,4 +112,43 @@ $(function() {
   })
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+    $work_slider = $('.our-work-carousel');
+
+    work_settings = {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: false,
+        dots: true,
+        arrows: true,
+        adaptiveHeight: true,
+    }
+
+    // $work_slider.slick(work_settings);
+
+
+    $(function() {
+        if ($(window).width() >= 1024) {
+            if ($work_slider.hasClass('slick-initialized')) {
+                $work_slider.slick('unslick');
+            }
+            return
+        } else if (!$work_slider.hasClass('slick-initialized')) {
+            return $work_slider.slick(work_settings);
+        }
+    });
+
+
 });

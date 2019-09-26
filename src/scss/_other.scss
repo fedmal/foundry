@@ -248,6 +248,9 @@
 	transition: all 0.5s ease;
 	font-weight: 700;
 	border: 2px solid transparent;
+	@include max-lg {
+		font-size: 20px;
+	}
 }
 
 .btn-all {
@@ -258,15 +261,17 @@
 			position: absolute;
 			left: 100%;
 			margin-left: 15px;
-			top: 2px;
+			top: 50%;
+			margin-top: -1px;
 			font-size: 12px;
 			font-weight: normal;
 			transition: all .3s;
+			transform: translate(7px, -50%);
 		}
 	}
 	&:hover {
 		.icon {
-			transform: translateX(7px);
+			transform: translate(0, -50%);
 		}
 	}
 }
@@ -339,6 +344,11 @@
 .container {
 	@include min-xl {
 		max-width: 1160px;
+	}
+	@include max-lg {
+		padding-left: 40px;
+		padding-right: 40px;
+		max-width: none;
 	}
 }
 
@@ -423,19 +433,9 @@
 	border-color: transparent !important;
 	color: unset !important; 
 	padding: 0;
-	// @include min-lg {
-	// 	display: none;
-	// }
-	// strong {
-	// 	display: block;
-	// 	position: absolute;
-	// 	top: 18px; 
-	// 	left: 0;
-	// 	font-size: 12px;
-	// 	color: #fff;
-	// 	font-weight: $font-semi;
-	// 	letter-spacing: 2px;
-	// }
+	@include max-sm {
+		top: 3px;
+	}
 	span {
 		display: block;
 		height: 3px;

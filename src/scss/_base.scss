@@ -426,6 +426,11 @@ a {
   margin-bottom: 42px;
 }
 
+.hero__caption {
+  position: relative;
+  z-index: 1;
+}
+
 .services {
   .container {
     @include min-xl {
@@ -549,6 +554,10 @@ a {
   border-width: 1px;
   font-size: 18px;
   padding: 8px 15px 7px;
+  display: none;
+  @include max-lg {
+    display: block;
+  }
 }
 
 .work-box__text {
@@ -612,12 +621,10 @@ a {
 .main_work {
   @include max-lg {
     .work-grid__col {
-      min-width: 100%;
       padding-left: 0;
       padding-right: 0;
     }
     .work-grid__row { 
-      display: block;
       margin-left: 0;
       margin-right: 0;
       padding-left: 30px;
@@ -826,7 +833,7 @@ a {
     margin: 0;
   }
   .slick-prev, .slick-next {
-    margin-top: -50px;
+    margin-top: -70px;
   }
 }
 

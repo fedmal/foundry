@@ -433,19 +433,9 @@
 	border-color: transparent !important;
 	color: unset !important; 
 	padding: 0;
-	// @include min-lg {
-	// 	display: none;
-	// }
-	// strong {
-	// 	display: block;
-	// 	position: absolute;
-	// 	top: 18px; 
-	// 	left: 0;
-	// 	font-size: 12px;
-	// 	color: #fff;
-	// 	font-weight: $font-semi;
-	// 	letter-spacing: 2px;
-	// }
+	@include max-sm {
+		top: 3px;
+	}
 	span {
 		display: block;
 		height: 3px;

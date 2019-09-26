@@ -1,8 +1,31 @@
+@media (min-width: 992px) {
+
+  .bg-lg-gray {
+    background-color: #f6f7f9;
+  }
+}
+
 @media (max-width: 991px) {
 
   .just-text {
     font-size: 22px;
     line-height: 1.37;
+  }
+
+  .service {
+    padding: 50px 0 0;
+
+    &__title {
+      
+      .fa {
+        display: none;
+      }
+    }
+
+    .container {
+      padding-bottom: 40px;
+      border-bottom: 1px solid #ededed;
+    }
   }
 
   .service-inc {
@@ -17,5 +40,9 @@
         display: none;
       }
     }
+  }
+
+  .logos {
+    padding-top: 0;
   }
 }

@@ -332,13 +332,6 @@ a {
 
 
 
-.hero {
-  height: 70vh;
-  min-height: 775px;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
 
 .hero__shape {
   overflow: hidden;
@@ -366,6 +359,10 @@ a {
 }
 
 .hero {
+  // height: 70vh;
+  min-height: 775px;
+  padding-top: 0;
+  padding-bottom: 0;
   position: relative;
   width: 100%;
   padding-top: 260px;
@@ -374,7 +371,26 @@ a {
   background: url(../images/bg/bg-pattern.png),#7b4397;
   background: url(../images/bg/bg-pattern.png),-webkit-gradient(linear,right top,left top,from(#7b4397),to(#dc2430));
   background: url(../images/bg/bg-pattern.png),linear-gradient(to left,#7b4397,#dc2430);
+  &.page-header {
+    min-height: 430px;
+    padding-top: 175px;
+    margin-bottom: 15px;
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      box-shadow: 0 0 8px 9px #fff;
+    }
+  }
 }
+
+.page-header__text {
+  font-size: 25px;
+}
+
 
 .hero__title {
   margin-bottom: 4px;
@@ -497,6 +513,16 @@ a {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;
+}
+
+.work-box__info {
+  max-width: 400px;
+  width: 100%;
+}
+
+.work-box__text {
+  color: #666666;
+  font-size: 15px;
 }
 
 .work-box__image {
@@ -787,3 +813,6 @@ a {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.our_work-page {
+  margin-bottom: 90px;
+}

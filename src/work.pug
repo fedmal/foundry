@@ -1,0 +1,50 @@
+extends pug/base
+
+append vars
+	-
+		var body = {
+			classList: ["main-page"]
+		}
+		var works = new Array(6)
+
+block content
+	.main-wrap
+		//- .site__layer
+		include pug/header
+		.hero.page-header
+			.container
+				h1.page-header__title
+					| Our Work
+				.page-header__text
+					p
+						| A sample of some of our recent projects
+
+		section.service.pt-0 
+			.container
+				include pug/breadcrumbs
+
+		.work.our_work-page
+			.container
+				.work-grid 
+					.row.work-grid__row.our-work-carousel
+						each work in works
+							.col-lg-6.work-grid__col
+								.work-box
+									.work-box__image
+										img(src="images/work.jpg", alt="")
+										a(href="#").work-box__view
+											span.btn.btn_width_190.btn-outline-white
+												| View Project
+									.work-box__info
+										h3.text-md.work-box__title
+											a(href="#")
+												| Proviz Sports
+										.work-box__text
+											p
+												| Digital Strategy / Solution Architecture / Customer Experience Strategy
+
+      
+		
+		
+
+		include pug/footer    

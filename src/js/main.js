@@ -8,7 +8,7 @@ $(function() {
 
   var siteToggle = $('.navbar-toggler'),
       layer=$('.site__layer'),
-      siteMenu= $('.header-nav-wrap');
+      siteMenu= $('.main-menu');
 
 
   siteToggle.on('click', function(){
@@ -103,6 +103,13 @@ $(function() {
   });
 
 
+  $('.help-feedback-form__btn').on('click', function(e) {
+    e.preventDefault()
+    if($('.help-feedback__slide').is(':hidden')) {
+      $('.help-feedback__slide').slideToggle();
+    }
+    
+  })
 
 
 });

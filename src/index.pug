@@ -16,8 +16,9 @@ block content
 		.hero
 			.container
 					h1.hero__title
-						| &nbsp;
+						
 						span.typer(data-typer-targets="We drive business growth,Create customer first success strategies,Drive business growth,Deliver successful business outcomes")
+						| &nbsp;
 					.lead.hero__desc
 						p
 							| through innovative digital solutions & experiences.
@@ -135,24 +136,26 @@ block content
 		.help-feedback
 			.container
 				.help-feedback__inner
-					h3.help-feedback__title.lead
-						| Let us help you reach your business goals
-					p.help-feedback__subtitle
-						| Arrange a no obligation meeting or call today
-					form(action="#").help-feedback-form
-						.row
-							.col-md-6
-								input.form-control(type="text", placeholder="Your Name*")
-							.col-md-6
-								input.form-control(type="text", placeholder="Your Email*")
-							.col-md-6
-								input.form-control(type="text", placeholder="Phone Number")
-							.col-md-6
-								input.form-control(type="text", placeholder="Company name")
 
-						.text-center
-							button.btn.btn-outline-white.btn-all.help-feedback-form__btn.btn_width_300
-								| Let’s Talk
+						h3.help-feedback__title.lead
+							| Let us help you reach your business goals
+						p.help-feedback__subtitle
+							| Arrange a no obligation meeting or call today
+						form(action="#").help-feedback-form
+							.help-feedback__slide
+								.row
+									.col-md-6
+										input.form-control(type="text", placeholder="Your Name*")
+									.col-md-6
+										input.form-control(type="text", placeholder="Your Email*")
+									.col-md-6
+										input.form-control(type="text", placeholder="Phone Number")
+									.col-md-6
+										input.form-control(type="text", placeholder="Company name")
+
+							.text-center
+								button.btn.btn-outline-white.btn-all.help-feedback-form__btn.btn_width_300
+									| Let’s Talk
 
 
 		footer.footer

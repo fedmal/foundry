@@ -66,9 +66,12 @@ a {
 }
 
 .header-toolbar {
-  display: flex;
+  display: none;
   margin-left: -14px;
   margin-right: -14px;
+  @include max-1024 {
+    display: flex;
+  }
   li {
     padding-left: 14px;
     padding-right: 14px;
@@ -144,6 +147,62 @@ a {
   transition: padding .3s ease;
 }
 
+
+@keyframes fade_in {
+  0% {
+      opacity: 0;
+      visibility: hidden
+  }
+  100% {
+      opacity: 1;
+      visibility: visible
+  }
+}
+
+@keyframes fade_out {
+  0% {
+      opacity: 1;
+      visibility: visible
+  }
+  100% {
+      opacity: 0;
+      visibility: hidden
+  }
+}
+
+@keyframes push_text_top {
+  0% {
+      opacity: 0;
+      transform: translateY(60px)
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0)
+  }
+}
+
+@keyframes push_nav_right {
+    0% {
+        opacity: 0;
+        transform: translateX(-60px)
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+@keyframes push_text_right {
+    0% {
+        opacity: 0;
+        transform: translateX(-60px)
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
 .main-menu {
   display: flex;
   margin-top: 10px;
@@ -152,12 +211,99 @@ a {
     & > a {
       color: #fff;
       font-family: 'Muli', sans-serif;
+      display: inline-block;
+      position: relative;
     }
   }
   @include max-1024 {
-    display: none;
+    z-index: 1000;
+    position: fixed;
+    margin-top: 0;
+    padding: 60px 30px 30px;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    transform: translateX(-100%);
+    height: 100%;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    & > li {
+      margin-left: 0;
+      margin-bottom: 20px;
+      & > a {
+        color: #000;
+      }
+    }
+    &.show {
+      transform: translate(0%); 
+      transition: all .3s ease;
+      transition-delay: .3s;
+      & > li {
+        & > a {
+          animation: push_text_right .4s cubic-bezier(.175, .885, .32, 1) both;
+        }
+        &:nth-child(1) {
+          & > a {
+            animation-delay: .45s;
+          }
+        }         
+        &:nth-child(2) {
+          & > a {
+            animation-delay: .55s;
+          }
+        }
+        &:nth-child(3) {
+          & > a {
+            animation-delay: .65s;
+          }
+        }
+        &:nth-child(4) {
+          & > a {
+            animation-delay: .75s;
+          }
+        }
+        &:nth-child(5) {
+          & > a {
+            animation-delay: .85s;
+          }
+        }
+        &:nth-child(6) {
+          & > a {
+            animation-delay: .95s;
+          }
+        }
+        &:nth-child(7) {
+          & > a {
+            animation-delay: 1.05s;
+          }
+        }
+        &:nth-child(8) {
+          a {
+            animation-delay: 1.1s;
+          }
+        }
+        &:nth-child(9) {
+          & > a {
+            animation-delay: 1.15s;
+          }
+        }
+        &:nth-child(10) {
+          & > a {
+            animation-delay: 1.2s;
+          }
+        }
+      }
+    }
   }
 }
+
+
+
 
 .hero {
   height: 70vh;
@@ -206,7 +352,6 @@ a {
   margin-bottom: 42px;
 }
 
-
 .services {
   .container {
     @include min-xl {
@@ -252,7 +397,9 @@ a {
   .services-grid__col {
     &:nth-child(2n) {
       .service-box {
-        padding-left: 80px;
+        @include min-1024 {
+          padding-left: 80px;
+        }
       }
     }
   }
@@ -323,8 +470,6 @@ a {
 
 
 .help-feedback {
-
-
   background: rgba(215,31,43,1);
   background: -moz-linear-gradient(left, rgba(215,31,43,1) 0%, rgba(162,39,74,1) 100%);
   background: -webkit-gradient(left top, right top, color-stop(0%, rgba(215,31,43,1)), color-stop(100%, rgba(162,39,74,1)));
@@ -333,11 +478,15 @@ a {
   background: -ms-linear-gradient(left, rgba(215,31,43,1) 0%, rgba(162,39,74,1) 100%);
   background: linear-gradient(to right, rgba(215,31,43,1) 0%, rgba(162,39,74,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d71f2b', endColorstr='#a2274a', GradientType=1 );
-
-
   color: #fff;
   padding-top: 120px;
   padding-bottom: 135px;
+}
+
+.help-feedback__slide {
+  @include max-1024 {
+    display: none;
+  }
 }
 
 .help-feedback__inner {

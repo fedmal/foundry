@@ -20,6 +20,11 @@ block content
 				.page-header__text
 					p
 						| A sample of some of our recent projects
+			.hero__shape
+				img(src="images/bg/page-header_wawe.png", alt="").hero__shape__default
+				img(src="images/bg/page-header_wawe-mob.png", alt="").hero__shape__mob
+
+				
 
 		main.main-container
 			.container
@@ -44,9 +49,33 @@ block content
 											.work-box__text
 												p
 													| Digital Strategy / Solution Architecture / Customer Experience Strategy
+											a(href="#").btn.btn-outline-primary.work-box__info__view
+												| View
 
-      
-		
+			.help-feedback
+				.container
+					.help-feedback__inner
+
+							h3.help-feedback__title.lead
+								| Let us help you reach your business goals
+							p.help-feedback__subtitle
+								| Arrange a no obligation meeting or call today
+							form(action="#").help-feedback-form
+								.help-feedback__slide
+									.row
+										.col-md-6
+											input.form-control(type="text", placeholder="Your Name*")
+										.col-md-6
+											input.form-control(type="text", placeholder="Your Email*")
+										.col-md-6
+											input.form-control(type="text", placeholder="Phone Number")
+										.col-md-6
+											input.form-control(type="text", placeholder="Company name")
+
+								.text-center
+									button.btn.btn-outline-white.btn-all.help-feedback-form__btn.btn_width_300
+										| Let’s Talk
+
 		
 
 		include pug/footer    

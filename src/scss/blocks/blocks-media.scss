@@ -6,11 +6,16 @@
   }
 
   .service-inc {
-    padding-top: 5px;
+    padding: 5px 0 30px;
     font-size: 24px;
 
     &__item {
       border-bottom: none;
+      padding: 8px 0;
+
+      &--caption {
+        display: none;
+      }
     }
   }
 }

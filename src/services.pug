@@ -11,9 +11,9 @@ block content
 	.main-wrap
 		//- .site__layer
 		include pug/header
+		include pug/breadcrumbs
 		section.service.pt-0
 			.container
-				include pug/breadcrumbs
 				.row.justify-content-between
 					.col-lg-7
 						h2.title.text-lg.service__title.text-left
@@ -23,28 +23,21 @@ block content
 							p
 								strong Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tortor enim, auctor eu leo id, convallis porta eros. 
 							p Vestibulum condimentum neque quam, id efficitur diam laoreet non. Praesent ultricies condimentum neque, non ultricies nulla tempor sit amet. Donec et odio eget elit dignissim condimentum.
-						a.btn.btn-outline-black.btn-all.btn_width_182.mr-2(href="#")
+						a.btn.btn-outline-black.btn-all.btn_width_182.mr-2.d-lg-inline-block.d-none(href="#")
 							span Learn More
 								i.icon.fa.fa-arrow-right
-						a.btn.btn-primary.btn_width_190(href="#") Enquire
+						a.btn.btn-primary.btn_width_190.d-lg-inline-block.d-none(href="#") Enquire
 					.col-lg-4
 						ul.service-inc
 							li.service-inc__item.service-inc__item--caption Services Include
 							li.service-inc__item Digital Strategy
 							li.service-inc__item Solution Architecture
 							li.service-inc__item Customer Experience Strategy
+						a.btn.btn-outline-primary.btn_width_182.d-lg-none(href="#") Learn More
 		section.service.bg-gray
 			.container
 				.row.justify-content-between
-					.col-lg-4
-						ul.service-inc
-							li.service-inc__item.service-inc__item--caption Services Include
-							li.service-inc__item User Experience (UX)
-							li.service-inc__item UI Design
-							li.service-inc__item Web Development
-							li.service-inc__item CMS Delivery
-							li.service-inc__item Mobile App Development
-					.col-lg-7
+					.col-lg-7.order-lg-1
 						h2.title.text-lg.service__title.text-left
 							i.fa.fa-desktop
 							|Design & Build
@@ -65,6 +58,14 @@ block content
 									img(src="images/silverstripe.png" srcset="images/silverstripe.png, images/silverstripe@2x.png 2x, images/silverstripe@3x.png 3x")
 								li.logos__item
 									img(src="images/concrete5.png" srcset="images/concrete5.png, images/concrete5@2x.png 2x, images/concrete5@3x.png 3x")
+					.col-lg-4
+						ul.service-inc
+							li.service-inc__item.service-inc__item--caption Services Include
+							li.service-inc__item User Experience (UX)
+							li.service-inc__item UI Design
+							li.service-inc__item Web Development
+							li.service-inc__item CMS Delivery
+							li.service-inc__item Mobile App Development
 		section.service
 			.container
 				.row.justify-content-between

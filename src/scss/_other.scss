@@ -328,6 +328,9 @@
 
 .btn_width_300 {
 	min-width: 300px;
+	@include max-lg {
+		min-width: 425px;
+	}
 }
 
 .container {
@@ -355,9 +358,9 @@
 
 .text-lg {
 	font-size: 48px;
-	// @include max-xl {
-	// 	font-size: 36px;
-	// }
+	@include max-lg {
+		font-size: 50px;
+	}
 	// @include max-md {
 	// 	font-size: 28px;
 	// }
@@ -594,6 +597,9 @@ textarea.form-control {
 .title {
 	text-align: center;
 	font-weight: 600;
+	@include max-lg {
+		text-align: left;
+	}
 }
 
 .title_decor {

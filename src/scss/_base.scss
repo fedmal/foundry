@@ -379,6 +379,16 @@ a {
     border-bottom: 1px solid #ededed;
     padding-bottom: 120px;
     margin-bottom: 90px;
+    @include max-lg {
+      border-bottom: 0;
+      margin-bottom: 120px;
+      padding-bottom: 0; 
+    }
+    .services-grid {
+      @include max-lg {
+        margin-bottom: 40px;
+      }
+    }
   }
 }
 
@@ -554,17 +564,21 @@ a {
 }
 
 .help-feedback__title {
-
+  margin-bottom: 35px;
+  @include max-lg {
+    font-size: 50px;
+    margin-bottom: 15px;
+  }
 }
 
 .help-feedback__subtitle {
   font-size: 20px;
   margin-bottom: 47px;
+  @include max-lg {
+    font-size: 32px;
+  }
 }
 
-.help-feedback__title {
-  margin-bottom: 35px;
-}
 
 .help-feedback-form__btn {
   margin-top: 23px;
@@ -647,6 +661,9 @@ a {
   padding-top: 30px;
   padding-bottom: 17px;
   font-size: 13px;
+  @include max-lg {
+    font-size: 22px;
+  }
 }
 
 .footer-bottom__nav {

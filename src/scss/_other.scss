@@ -331,6 +331,9 @@
 	@include max-lg {
 		min-width: 425px;
 	}
+	@include max-md {
+		min-width: 325px;
+	}
 }
 
 .container {

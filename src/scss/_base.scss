@@ -107,7 +107,7 @@ a {
         padding-bottom: 25px;
       }
     }
-    .main-menu-list {
+    .main-menu {
       & > li {
         & > a {
           color: #010101;
@@ -477,6 +477,7 @@ a {
 
 .services__btn {
   text-align: center;
+  margin-top: 15px; 
 }
 
 

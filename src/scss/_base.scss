@@ -311,6 +311,35 @@ a {
       font-family: 'Muli', sans-serif;
       display: inline-block;
       position: relative;
+      padding-bottom: 6px;
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        transform:  scaleX(0);
+        bottom: 0;
+        height: 1px;
+        background-color: #fff;
+        transform-origin: right;
+        transition: transform .7s cubic-bezier(.19,1,.22,1), background-color .6s ease;
+      }
+      &:hover {
+        text-decoration: none;
+        &::before {
+          transform:  scaleX(1);
+          transform-origin: left;
+        }
+      }
+
+    }
+    &.current_page_item {
+      & > a {
+        &::before {
+          transform:  scaleX(1);
+          transform-origin: left;
+        }
+      }
     }
   }
 }
@@ -746,8 +775,6 @@ a {
     .work-grid__row { 
       margin-left: 0;
       margin-right: 0;
-      padding-left: 30px;
-      padding-right: 30px;
       margin-bottom: 50px;
     }
   }
@@ -953,6 +980,9 @@ a {
   }
   .slick-prev, .slick-next {
     margin-top: -70px;
+    @include  max-sm {
+      margin-top: -80px;
+    }
   }
 }
 
@@ -960,13 +990,13 @@ a {
     opacity: 0.25;
 }
 .slick-next {
-  right: 0;
+  right: -30px;
   &::before {
     content: "\f105";
   }
 }
 .slick-prev {
-  left: 0;
+  left: -30px;
   &::before {
     content: "\f104";
   }

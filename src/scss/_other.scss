@@ -283,7 +283,8 @@
 	background-color: #58a3d3;
 	color: #FFF;
 	&:hover, &:active, &:focus {
-
+		background-color: #a2274a;
+		border-color: #a2274a;
 	}
 }
 
@@ -292,8 +293,8 @@
 	border-color:  #fa0556;
 	color: #fff;
 	&:hover, &:active, &:focus {
-		background-color: #fa0556;
-		border-color: #fa0556;
+		background-color: #a2274a;
+		border-color: #a2274a;
 	}
 }
 
@@ -303,7 +304,8 @@
   background-color: transparent;
   &:hover, &:active, &:focus {
     background-color: transparent;
-    color: #fa0556;
+    color: #a2274a;
+    border-color: #a2274a;
   }
 }
 
@@ -314,6 +316,7 @@
 	&:hover, &:active, &:focus {
 		background-color: transparent;
 		color: #fff;
+		border-color: #fa0556;
 	}
 }
 
@@ -332,6 +335,9 @@
 
 .btn_width_190 {
 	min-width: 190px;
+	@include max-sm {
+		min-width: 160px;
+	}
 }
 
 .btn_width_300 {

@@ -3,7 +3,7 @@ extends pug/base
 append vars
 	-
 		var body = {
-			classList: ["main-page"]
+			classList: ["header-bg-2"]
 		}
 		var works = new Array(6)
 
@@ -33,14 +33,17 @@ block content
 
 			.contact
 				.container
-					h2.title.text-lg.contact__title
+					h2.title.text-lg.contact__title.hidden-lg
 						| How can we help?
 
 					.row
-						.col-lg-6
+						.col-lg-6.contact__left__col
 							.contact-info
-								p
-									| Foundry have been designing digital solutions & experiences that drive online growth since 2008. 
+								h3.contact-info__title.visible-lg
+									| Contact Details
+								.contact-info__desc.hidden-lg
+									p
+										| Foundry have been designing digital solutions & experiences that drive online growth since 2008. 
 
 								ul.contact-list
 									li.contact-list__item
@@ -56,13 +59,22 @@ block content
 										span.contact-list__text
 											| 12 Madden Street, Wynyard Quarter Auckland 1010
 
-						.col-lg-6
-							form(action="#")
+						.col-lg-6.contact__right__col
+							.contact-info__desc.visible-lg
+								p
+									| Foundry have been designing digital solutions & experiences that drive online growth since 2008. 
+
+
+							form(action="#").contact-form
 								label
-									| Full Name*
+									| Full Name
+									span
+										| *
 								input.form-control(type="text")
 								label
-									| Email*
+									| Email
+									span
+										| *
 								input.form-control(type="text")
 								label
 									| Phone
@@ -85,7 +97,7 @@ block content
 
 
 
-			.help-feedback
+			.help-feedback.hidden-lg
 				.container
 					.help-feedback__inner
 

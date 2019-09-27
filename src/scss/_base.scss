@@ -1192,3 +1192,16 @@ a {
   }
 }
 
+span.wpcf7-not-valid-tip {
+  display: none;
+}
+
+.wpcf7-not-valid {
+  border-color: #FA0556 !important;
+}
+
+div.wpcf7 .ajax-loader {
+  position: absolute;
+  background-image: url('/wp-includes/images/spinner.gif');
+  background-size: contain;
+}

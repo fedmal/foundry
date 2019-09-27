@@ -136,8 +136,9 @@ $(function() {
   $('.help-feedback-form__btn').on('click', toggleForm);
 
   function toggleForm (e) {
-    e.preventDefault()
+    
     if($('.help-feedback__slide').is(':hidden')) {
+      e.preventDefault()
       $('.help-feedback__slide').slideToggle();
       $(this).off('click', toggleForm)
     }

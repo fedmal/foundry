@@ -9,164 +9,203 @@ append vars
 
 block content
 	.main-wrap
-		//- .site__layer
+		.site__layer
 		include pug/header
-		include pug/breadcrumbs
-		section.service.pt-0
+		.hero.page-header
 			.container
-				.row.justify-content-between
-					.col-lg-7
-						h2.title.text-lg.service__title.text-left
-							i.fa.fa-desktop
-							|Strategy & Consulting
-						.just-text
-							p
-								strong Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tortor enim, auctor eu leo id, convallis porta eros. 
-							p Vestibulum condimentum neque quam, id efficitur diam laoreet non. Praesent ultricies condimentum neque, non ultricies nulla tempor sit amet. Donec et odio eget elit dignissim condimentum.
-						a.btn.btn-outline-black.btn-all.btn_width_182.mr-2.d-lg-inline-block.d-none(href="#")
-							span Learn More
-								i.icon.fa.fa-arrow-right
-						a.btn.btn-primary.btn_width_190.d-lg-inline-block.d-none(href="#") Enquire
-					.col-lg-4
-						ul.service-inc
-							li.service-inc__item.service-inc__item--caption Services Include
-							li.service-inc__item Digital Strategy
-							li.service-inc__item Solution Architecture
-							li.service-inc__item Customer Experience Strategy
-						a.btn.btn-outline-primary.btn_width_182.d-lg-none(href="#") Learn More
-		section.service.bg-lg-gray
+				.hero__caption
+					h1.page-header__title
+						| Our Services
+					.page-header__text
+						p
+							| We offer a wide range of capabilities for our clients.
+						.hidden-lg
+							a(href="#").btn.btn-outline-white.btn_width_190
+								| Contact Us
+			.hero__shape
+				img(src="images/bg/page-header_wawe.png", alt="").hero__shape__default
+				img(src="images/bg/page-header_wawe-mob.png", alt="").hero__shape__mob
+		main.main-container
 			.container
-				.row.justify-content-between
-					.col-lg-7.order-lg-1
-						h2.title.text-lg.service__title.text-left
-							i.fa.fa-desktop
-							|Design & Build
-						.just-text
-							p
-								strong Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tortor enim, auctor eu leo id, convallis porta eros. 
-							p Vestibulum condimentum neque quam, id efficitur diam laoreet non. Praesent ultricies condimentum neque, non ultricies nulla tempor sit amet. Donec et odio eget elit dignissim condimentum.
-						a.btn.btn-outline-black.btn-all.btn_width_182.d-lg-inline-block.d-none.mr-2(href="#")
-							span Learn More
-								i.icon.fa.fa-arrow-right
-						a.btn.btn-primary.btn_width_190.d-lg-inline-block.d-none(href="#") Enquire
-						.logos.d-none.d-lg-block
-							h3.text-sm.logos__title CMS Platforms
-							ul.logos__list
-								li.logos__item
-									img(src="images/wordpress.png" srcset="images/wordpress.png, images/wordpress@2x.png 2x, images/wordpress@3x.png 3x")
-								li.logos__item
-									img(src="images/silverstripe.png" srcset="images/silverstripe.png, images/silverstripe@2x.png 2x, images/silverstripe@3x.png 3x")
-								li.logos__item
-									img(src="images/concrete5.png" srcset="images/concrete5.png, images/concrete5@2x.png 2x, images/concrete5@3x.png 3x")
-					.col-lg-4
-						ul.service-inc
-							li.service-inc__item.service-inc__item--caption Services Include
-							li.service-inc__item User Experience (UX)
-							li.service-inc__item UI Design
-							li.service-inc__item Web Development
-							li.service-inc__item CMS Delivery
-							li.service-inc__item Mobile App Development
-		section.service
-			.container
-				.row.justify-content-between
-					.col-lg-7
-						h2.title.text-lg.service__title.text-left
-							i.fa.fa-desktop
-							| eCommerce
-						.just-text
-							p
-								strong Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tortor enim, auctor eu leo id, convallis porta eros. 
-							p Vestibulum condimentum neque quam, id efficitur diam laoreet non. Praesent ultricies condimentum neque, non ultricies nulla tempor sit amet. Donec et odio eget elit dignissim condimentum.
-						a.btn.btn-outline-primary.btn_width_190.d-lg-inline-block.d-none(href="#") Enquire
-						.logos.d-none.d-lg-block
-							ul.logos__list
-								li.logos__item
-									img(src="images/magento.png" srcset="images/magento.png, images/magento@2x.png 2x, images/magento@3x.png 3x")
-								li.logos__item
-									img(src="images/shopify.png" srcset="images/shopify.png, images/shopify@2x.png 2x, images/shopify@3x.png 3x")
-								li.logos__item
-									img(src="images/bigcommerce.png" srcset="images/bigcommerce.png, images/bigcommerce@2x.png 2x, images/bigcommerce@3x.png 3x")
-					.col-lg-4
-						ul.service-inc
-							li.service-inc__item.service-inc__item--caption Services Include
-							li.service-inc__item Build
-							li.service-inc__item Migrations & Upgrades
-							li.service-inc__item Integrations
-							li.service-inc__item Conversion Rate Optimisation
-							li.service-inc__item Automation
-						.logos.d-lg-none
-							ul.logos__list
-								li.logos__item
-									img(src="images/magento-mobil.png" srcset="images/magento-mobil.png, images/magento-mobil@2x.png 2x, images/magento-mobil@3x.png 3x")
-								li.logos__item
-									img(src="images/shopify-mobil.png" srcset="images/shopify-mobil.png, images/shopify-mobil@2x.png 2x, images/shopify-mobil@3x.png 3x")
-								li.logos__item
-									img(src="images/bigcommerce.png" srcset="images/bigcommerce.png, images/bigcommerce@2x.png 2x, images/bigcommerce@3x.png 3x")
-		section.service.bg-lg-gray
-			.container
-				.row.justify-content-between
-					.col-lg-7.order-lg-1
-						h2.title.text-lg.service__title.text-left
-							i.fa.fa-desktop
-							| Digital Performance Marketing
-						.just-text
-							p
-								strong Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tortor enim, auctor eu leo id, convallis porta eros. 
-							p Vestibulum condimentum neque quam, id efficitur diam laoreet non. Praesent ultricies condimentum neque, non ultricies nulla tempor sit amet. Donec et odio eget elit dignissim condimentum.
-						a.btn.btn-outline-black.btn-all.btn_width_182.mr-2.d-lg-inline-block.d-none(href="#")
-							span Learn More
-								i.icon.fa.fa-arrow-right
-						a.btn.btn-primary.btn_width_190.d-lg-inline-block.d-none(href="#") Enquire
-					.col-lg-4
-						ul.service-inc
-							li.service-inc__item.service-inc__item--caption Services Include
-							li.service-inc__item Campaign Strategy & Management
-							li.service-inc__item Email Marketing
-							li.service-inc__item Social
-							li.service-inc__item SEM - Paid Search / Adwords
-							li.service-inc__item Search Engine Optimisation (SEO)
-		section.service
-			.container
-				.row.justify-content-between
-					.col-lg-8
-						h2.title.text-lg.service__title.text-left
-							i.fa.fa-desktop
-							| Optimisation & Management
-						.just-text
-							p
-								strong Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tortor enim, auctor eu leo id, convallis porta eros. 
-							p Vestibulum condimentum neque quam, id efficitur diam laoreet non. Praesent ultricies condimentum neque, non ultricies nulla tempor sit amet. Donec et odio eget elit dignissim condimentum.
-						a.btn.btn-outline-primary.btn_width_190.d-lg-inline-block.d-none(href="#") Enquire
-					.col-lg-4
-						ul.service-inc
-							li.service-inc__item.service-inc__item--caption Services Include
-							li.service-inc__item Build
-							li.service-inc__item Migrations & Upgrades
-							li.service-inc__item Integrations
-							li.service-inc__item Conversion Rate Optimisation
-							li.service-inc__item Automation
-		section.service.bg-lg-gray
-			.container
-				.row.justify-content-between
-					.col-lg-7.order-lg-1
-						h2.title.text-lg.service__title.text-left
-							i.fa.fa-desktop
-							| Data & Intelligence
-						.just-text
-							p
-								strong Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tortor enim, auctor eu leo id, convallis porta eros. 
-							p Vestibulum condimentum neque quam, id efficitur diam laoreet non. Praesent ultricies condimentum neque, non ultricies nulla tempor sit amet. Donec et odio eget elit dignissim condimentum.
-						a.btn.btn-outline-black.btn-all.btn_width_182.d-lg-inline-block.d-none.mr-2(href="#")
-							span Learn More
-								i.icon.fa.fa-arrow-right
-						a.btn.btn-primary.btn_width_190.d-lg-inline-block.d-none(href="#") Enquire
-					.col-lg-4
-						ul.service-inc
-							li.service-inc__item.service-inc__item--caption Services Include
-							li.service-inc__item Custom Reporting & Analysis 
-							li.service-inc__item Automation
+				include pug/breadcrumbs
 
-      
+			section.service.pt-0
+				.container
+					.row.justify-content-between
+						.col-lg-7
+							h2.title.text-lg.service__title.text-left
+								i.fa.fa-desktop
+								|Strategy & Consulting
+							.just-text
+								p
+									strong Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tortor enim, auctor eu leo id, convallis porta eros. 
+								p Vestibulum condimentum neque quam, id efficitur diam laoreet non. Praesent ultricies condimentum neque, non ultricies nulla tempor sit amet. Donec et odio eget elit dignissim condimentum.
+							a.btn.btn-outline-black.btn-all.btn_width_182.mr-2.d-lg-inline-block.d-none(href="#")
+								span Learn More
+									i.icon.fa.fa-arrow-right
+							a.btn.btn-primary.btn_width_190.d-lg-inline-block.d-none(href="#") Enquire
+						.col-lg-4
+							ul.service-inc
+								li.service-inc__item.service-inc__item--caption Services Include
+								li.service-inc__item Digital Strategy
+								li.service-inc__item Solution Architecture
+								li.service-inc__item Customer Experience Strategy
+							a.btn.btn-outline-primary.btn_width_182.d-lg-none(href="#") Learn More
+			section.service.bg-lg-gray
+				.container
+					.row.justify-content-between
+						.col-lg-7.order-lg-1
+							h2.title.text-lg.service__title.text-left
+								i.fa.fa-desktop
+								|Design & Build
+							.just-text
+								p
+									strong Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tortor enim, auctor eu leo id, convallis porta eros. 
+								p Vestibulum condimentum neque quam, id efficitur diam laoreet non. Praesent ultricies condimentum neque, non ultricies nulla tempor sit amet. Donec et odio eget elit dignissim condimentum.
+							a.btn.btn-outline-black.btn-all.btn_width_182.d-lg-inline-block.d-none.mr-2(href="#")
+								span Learn More
+									i.icon.fa.fa-arrow-right
+							a.btn.btn-primary.btn_width_190.d-lg-inline-block.d-none(href="#") Enquire
+							.logos.d-none.d-lg-block
+								h3.text-sm.logos__title CMS Platforms
+								ul.logos__list
+									li.logos__item
+										img(src="images/wordpress.png" srcset="images/wordpress.png, images/wordpress@2x.png 2x, images/wordpress@3x.png 3x")
+									li.logos__item
+										img(src="images/silverstripe.png" srcset="images/silverstripe.png, images/silverstripe@2x.png 2x, images/silverstripe@3x.png 3x")
+									li.logos__item
+										img(src="images/concrete5.png" srcset="images/concrete5.png, images/concrete5@2x.png 2x, images/concrete5@3x.png 3x")
+						.col-lg-4
+							ul.service-inc
+								li.service-inc__item.service-inc__item--caption Services Include
+								li.service-inc__item User Experience (UX)
+								li.service-inc__item UI Design
+								li.service-inc__item Web Development
+								li.service-inc__item CMS Delivery
+								li.service-inc__item Mobile App Development
+			section.service
+				.container
+					.row.justify-content-between
+						.col-lg-7
+							h2.title.text-lg.service__title.text-left
+								i.fa.fa-desktop
+								| eCommerce
+							.just-text
+								p
+									strong Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tortor enim, auctor eu leo id, convallis porta eros. 
+								p Vestibulum condimentum neque quam, id efficitur diam laoreet non. Praesent ultricies condimentum neque, non ultricies nulla tempor sit amet. Donec et odio eget elit dignissim condimentum.
+							a.btn.btn-outline-primary.btn_width_190.d-lg-inline-block.d-none(href="#") Enquire
+							.logos.d-none.d-lg-block
+								ul.logos__list
+									li.logos__item
+										img(src="images/magento.png" srcset="images/magento.png, images/magento@2x.png 2x, images/magento@3x.png 3x")
+									li.logos__item
+										img(src="images/shopify.png" srcset="images/shopify.png, images/shopify@2x.png 2x, images/shopify@3x.png 3x")
+									li.logos__item
+										img(src="images/bigcommerce.png" srcset="images/bigcommerce.png, images/bigcommerce@2x.png 2x, images/bigcommerce@3x.png 3x")
+						.col-lg-4
+							ul.service-inc
+								li.service-inc__item.service-inc__item--caption Services Include
+								li.service-inc__item Build
+								li.service-inc__item Migrations & Upgrades
+								li.service-inc__item Integrations
+								li.service-inc__item Conversion Rate Optimisation
+								li.service-inc__item Automation
+							.logos.d-lg-none
+								ul.logos__list
+									li.logos__item
+										img(src="images/magento-mobil.png" srcset="images/magento-mobil.png, images/magento-mobil@2x.png 2x, images/magento-mobil@3x.png 3x")
+									li.logos__item
+										img(src="images/shopify-mobil.png" srcset="images/shopify-mobil.png, images/shopify-mobil@2x.png 2x, images/shopify-mobil@3x.png 3x")
+									li.logos__item
+										img(src="images/bigcommerce.png" srcset="images/bigcommerce.png, images/bigcommerce@2x.png 2x, images/bigcommerce@3x.png 3x")
+			section.service.bg-lg-gray
+				.container
+					.row.justify-content-between
+						.col-lg-7.order-lg-1
+							h2.title.text-lg.service__title.text-left
+								i.fa.fa-desktop
+								| Digital Performance Marketing
+							.just-text
+								p
+									strong Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tortor enim, auctor eu leo id, convallis porta eros. 
+								p Vestibulum condimentum neque quam, id efficitur diam laoreet non. Praesent ultricies condimentum neque, non ultricies nulla tempor sit amet. Donec et odio eget elit dignissim condimentum.
+							a.btn.btn-outline-black.btn-all.btn_width_182.mr-2.d-lg-inline-block.d-none(href="#")
+								span Learn More
+									i.icon.fa.fa-arrow-right
+							a.btn.btn-primary.btn_width_190.d-lg-inline-block.d-none(href="#") Enquire
+						.col-lg-4
+							ul.service-inc
+								li.service-inc__item.service-inc__item--caption Services Include
+								li.service-inc__item Campaign Strategy & Management
+								li.service-inc__item Email Marketing
+								li.service-inc__item Social
+								li.service-inc__item SEM - Paid Search / Adwords
+								li.service-inc__item Search Engine Optimisation (SEO)
+			section.service
+				.container
+					.row.justify-content-between
+						.col-lg-8
+							h2.title.text-lg.service__title.text-left
+								i.fa.fa-desktop
+								| Optimisation & Management
+							.just-text
+								p
+									strong Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tortor enim, auctor eu leo id, convallis porta eros. 
+								p Vestibulum condimentum neque quam, id efficitur diam laoreet non. Praesent ultricies condimentum neque, non ultricies nulla tempor sit amet. Donec et odio eget elit dignissim condimentum.
+							a.btn.btn-outline-primary.btn_width_190.d-lg-inline-block.d-none(href="#") Enquire
+						.col-lg-4
+							ul.service-inc
+								li.service-inc__item.service-inc__item--caption Services Include
+								li.service-inc__item Build
+								li.service-inc__item Migrations & Upgrades
+								li.service-inc__item Integrations
+								li.service-inc__item Conversion Rate Optimisation
+								li.service-inc__item Automation
+			section.service.bg-lg-gray
+				.container
+					.row.justify-content-between
+						.col-lg-7.order-lg-1
+							h2.title.text-lg.service__title.text-left
+								i.fa.fa-desktop
+								| Data & Intelligence
+							.just-text
+								p
+									strong Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tortor enim, auctor eu leo id, convallis porta eros. 
+								p Vestibulum condimentum neque quam, id efficitur diam laoreet non. Praesent ultricies condimentum neque, non ultricies nulla tempor sit amet. Donec et odio eget elit dignissim condimentum.
+							a.btn.btn-outline-black.btn-all.btn_width_182.d-lg-inline-block.d-none.mr-2(href="#")
+								span Learn More
+									i.icon.fa.fa-arrow-right
+							a.btn.btn-primary.btn_width_190.d-lg-inline-block.d-none(href="#") Enquire
+						.col-lg-4
+							ul.service-inc
+								li.service-inc__item.service-inc__item--caption Services Include
+								li.service-inc__item Custom Reporting & Analysis 
+								li.service-inc__item Automation
+
+			.help-feedback
+				.container
+					.help-feedback__inner
+
+						h3.help-feedback__title.lead
+							| Let us help you reach your business goals
+						p.help-feedback__subtitle
+							| Arrange a no obligation meeting or call today
+						form(action="#").help-feedback-form
+							.help-feedback__slide
+								.row
+									.col-md-6
+										input.form-control(type="text", placeholder="Your Name*")
+									.col-md-6
+										input.form-control(type="text", placeholder="Your Email*")
+									.col-md-6
+										input.form-control(type="text", placeholder="Phone Number")
+									.col-md-6
+										input.form-control(type="text", placeholder="Company name")
+
+							.text-center
+								button.btn.btn-outline-white.btn-all.help-feedback-form__btn.btn_width_300
+									| Let’s Talk
 		
 		
 

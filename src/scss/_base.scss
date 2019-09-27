@@ -745,6 +745,9 @@ a {
   transition: all 0.4s ease-out 0s;
   .btn {
     @include centerer
+    &:hover {
+      border-color: #fff;
+    }
   }
 
 }

@@ -18,7 +18,7 @@ body {
   color: $color-black;
   font-family: 'Catamaran', sans-serif;
   @include max-sm {
-    font-size: 12px;
+    font-size: 20px;
   }
   // letter-spacing: 1px;
 }
@@ -400,6 +400,7 @@ a {
 
 .page-header__text {
   font-size: 25px;
+  margin-bottom: 30px;
   @include max-lg {
     display: none;
   }
@@ -458,11 +459,60 @@ a {
   margin-bottom: 55px;
 }
 
+
+
 .services-grid {
 
 }
 
-.service-box {
+
+// .service-box {
+//   display: flex;
+//   margin-bottom: 40px;
+//   max-width: 480px;
+//   width: 100%;
+//   @include max-lg {
+//     margin-bottom: 20px;
+//   }
+// }
+
+// .service-box__title {
+//   @include max-lg {
+//     font-size: 30px;
+//   }
+// }
+
+// .service-box__icon {
+//   min-width: 55px;
+//   margin-right: 15px;
+//   @include max-lg {
+//     min-width: 30px;
+//   }
+//   .icon {
+//     font-size: 40px;
+//     color: #f9054c;
+//     @include max-lg {
+//       font-size: 30px;
+//       position: relative;
+//       top: 2px;
+//     }
+//   }
+// }
+
+// .service-box__info {
+//   flex: 1;
+//   @include max-lg {
+//     padding-top: 3px;
+//     p {
+//       display: none;
+//     }
+
+//   }
+// }
+
+
+
+.icon-box {
   display: flex;
   margin-bottom: 40px;
   max-width: 480px;
@@ -470,38 +520,107 @@ a {
   @include max-lg {
     margin-bottom: 20px;
   }
-}
+  &.service_box {
+    .icon-box__info {
+      @include max-lg {
+        p {
+          display: none;
+        }
+      }
+    }
+    .icon-box__title {
+      a {
+        @include max-lg {
+          position: relative;
+          &::before {
+            content: "\f061";
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: 20px;
+            position: absolute;
+            left: 100%;
+            margin-left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+      }
 
-.service-box__icon {
-  min-width: 55px;
-  margin-right: 15px;
-  @include max-lg {
-    min-width: 30px;
-  }
-  .icon {
-    font-size: 40px;
-    color: #f9054c;
-    @include max-lg {
-      font-size: 25px;
     }
   }
 }
 
-.service-box__info {
+.icon-box__title {
+  @include max-lg {
+    font-size: 30px;
+  }
+}
+
+.icon-box__icon {
+  min-width: 55px;
+  margin-right: 15px;
+  font-size: 40px;
+  color: #f9054c;
+  @include max-lg {
+    min-width: 30px;
+    font-size: 30px;
+    position: relative;
+    top: 2px;
+  }
+}
+
+.icon-box__info {
   flex: 1;
   @include max-lg {
     padding-top: 3px;
-    p {
+  }
+}
+
+.icon-boxes_contact {
+  padding-left: 30px;
+  @include max-lg {
+    padding-left: 0;
+  }
+  .icon-box {
+    margin-bottom: 30px;
+    .icon-box__heading {
+      .icon {
+        display: none;
+        float: left;
+        @include max-lg {
+          display: block;
+        }
+      }
+      .icon-box__title {
+        @include max-lg {
+          padding-left: 68px;
+          margin-bottom: 0;
+          margin-top: 5px;
+          font-size: 26px;
+        }
+      }
+      @include max-lg {
+        overflow: hidden;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+
+  .icon-box__title {
+    margin-bottom: 20px;
+  }
+
+  .icon-box__icon {
+    @include max-lg {
       display: none;
     }
-
   }
 }
 
 .services-grid__row {
   .services-grid__col {
     &:nth-child(2n) {
-      .service-box {
+      .service_box {
         @include min-1024 {
           padding-left: 80px;
         }
@@ -863,6 +982,9 @@ a {
     z-index: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    @include max-sm {
+      font-size: 50px;
+    }
 }
 
 .our_work-page {
@@ -948,6 +1070,11 @@ a {
         padding-left: 50px;
       }
     } 
+    .fa-external-link {
+      margin-left: 10px;
+      position: relative;
+      top: 2px;
+    }
   }
 }
 
@@ -980,3 +1107,58 @@ a {
     }
   }
 }
+
+.about-featured {
+  padding-bottom: 60px;
+}
+
+.about-featured__info {
+  padding-top: 35px;
+  @include max-lg {
+    padding-top: 0;
+  }
+  strong {
+    font-size: 22px;
+    font-weight: 600;
+  }
+}
+
+.about-featured__img {
+  padding-top: 10px;
+  padding-left: 60px;
+}
+
+.admin-bar .header-fixed {
+  top: 32px;
+}
+
+@media (max-width: 782px) {
+  .admin-bar .header-fixed {
+    top: 46px;
+  }
+}
+
+.about-approach {
+  padding-top: 80px;
+  padding-bottom: 115px;
+  @include max-lg {
+    background-color: #fff;
+    padding-top: 30px;
+    padding-bottom: 80px;
+  }
+  .btn-list {
+    padding-top: 20px;
+  }
+}
+
+.about-approach__info {
+  margin-bottom: 60px;
+}
+
+.about-approach__title {
+  margin-bottom: 40px;
+  @include max-lg {
+    font-size: 40px;
+  }
+}
+

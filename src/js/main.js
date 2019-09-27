@@ -133,13 +133,16 @@ $(function() {
   });
 
 
-  $('.help-feedback-form__btn').on('click', function(e) {
+  $('.help-feedback-form__btn').on('click', toggleForm);
+
+  function toggleForm (e) {
     e.preventDefault()
     if($('.help-feedback__slide').is(':hidden')) {
       $('.help-feedback__slide').slideToggle();
+      $(this).off('click', toggleForm)
     }
     
-  })
+  }
 
 
 

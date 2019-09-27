@@ -1,0 +1,156 @@
+extends pug/base
+
+append vars
+	-
+		var body = {
+			classList: ["header-bg-2"]
+		}
+		var works = new Array(6)
+
+block content
+	.main-wrap
+		.site__layer
+
+
+		include pug/header
+		.hero.page-header
+			.container
+				.hero__caption
+					h1.page-header__title
+						| About Foundry 
+					.page-header__text
+						p
+							| Digital nomads, that strive for excellence.
+						.hidden-lg
+							a(href="#").btn.btn-outline-white.btn_width_190
+								| Contact Us
+			.hero__shape
+				img(src="images/bg/page-header_wawe.png", alt="").hero__shape__default
+				img(src="images/bg/page-header_wawe-mob.png", alt="").hero__shape__mob
+
+				
+
+		main.main-container
+			.container
+				include pug/breadcrumbs
+
+			.about-featured
+				.container
+					.row
+						.col-lg-7
+							.about-featured__info.text-xs.parag_mb_20
+								p
+									strong
+										| Foundry have been designing digital solutions & experiences that drive online growth since 2008. 
+											
+								p
+									| In a crowded digital market, our success is driven by aligning with our client’s 
+									| business goals and devising digital strategies that deliver successful business outcomes. 
+
+								p
+									| We partner with forward thinking corporate & niche businesses of any size and complexity, 
+									| striving for unparalleled results that deliver increased value time and time again.
+
+
+								.visible-lg
+									.spacer.spacer-20
+									a(href="#").btn.btn-outline-primary.btn_width_182
+										| Contact Us
+												
+
+								
+
+
+						.col-lg-5
+							.about-featured__img.hidden-lg
+								img(src="images/about.png", alt="")
+
+
+			.about-approach.grey-bg
+
+				.container
+					h3.text-lg.about-approach__title
+						| Our Approach
+
+
+					.row
+						.col-lg-7
+							.about-approach__info
+								.text-xs.parag_mb_20
+									p
+										| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tortor enim, auctor eu leo id, convallis porta eros. 
+
+									p
+										| Vestibulum condimentum neque quam, id efficitur diam laoreet non. Praesent ultricies condimentum neque, non ultricies nulla tempor sit amet. 
+										| Donec et odio eget elit dignissim condimentum.
+
+								.btn-list.hidden-lg
+									li.btn-list__item
+										a(href="#").btn.btn_width_190.btn-outline-black.btn-all
+											span
+												| Learn More
+												i.icon.fa.fa-arrow-right
+
+									li
+										a(href="#").btn.btn_width_190.btn-primary
+											| Enquire
+
+						.col-lg-5
+							ul.icon-boxes.icon-boxes_contact
+								li
+									.icon-box
+										i.icon-box__icon.icon.fa.fa-star-o
+											
+										.icon-box__info
+											.icon-box__heading
+												i.icon-box__icon.icon.fa.fa-star-o
+												h3.text-md.icon-box__title
+													| Customer First Approach
+											p
+												| Vestibulum condimentum neque quam, id efficitur diam laoreet non. Praesent ultricies condimentum neque.
+									.icon-box
+										i.icon-box__icon.icon.fa.fa-star-o
+										.icon-box__info
+											.icon-box__heading
+												i.icon-box__icon.icon.fa.fa-star-o
+												h3.text-md.icon-box__title
+													| Data Driven Decisions
+											p
+												| Vestibulum condimentum neque quam, id efficitur diam laoreet non. Praesent ultricies condimentum neque.
+									.icon-box
+										i.icon-box__icon.icon.fa.fa-star-o
+										.icon-box__info
+											.icon-box__heading
+												i.icon-box__icon.icon.fa.fa-star-o
+												h3.text-md.icon-box__title
+													| Data Driven Decisions
+											p
+												| Vestibulum condimentum neque quam, id efficitur diam laoreet non. Praesent ultricies condimentum neque.
+
+			.help-feedback.hidden-lg
+				.container
+					.help-feedback__inner
+
+							h3.help-feedback__title.lead
+								| Let us help you reach your business goals
+							p.help-feedback__subtitle
+								| Arrange a no obligation meeting or call today
+							form(action="#").help-feedback-form
+								.help-feedback__slide
+									.row
+										.col-md-6
+											input.form-control(type="text", placeholder="Your Name*")
+										.col-md-6
+											input.form-control(type="text", placeholder="Your Email*")
+										.col-md-6
+											input.form-control(type="text", placeholder="Phone Number")
+										.col-md-6
+											input.form-control(type="text", placeholder="Company name")
+
+								.text-center
+									button.btn.btn-outline-white.btn-all.help-feedback-form__btn.btn_width_300
+										| Let’s Talk
+
+		
+
+		include pug/footer    

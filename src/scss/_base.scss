@@ -1208,3 +1208,8 @@ div.wpcf7 .ajax-loader {
   background-image: url('/wp-includes/images/spinner.gif');
   background-size: contain;
 }
+
+.wpcf7-not-valid {
+    border-color: #FA0556 !important;
+    background-color: #f8a7b9 !important;
+}

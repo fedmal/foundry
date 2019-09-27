@@ -274,6 +274,7 @@ html(class=html.classList)&attributes(html.attrs)
 		block body-start
 		block content
 		block scripts
+			script(src=`${baseDir}js/jquery/dist/jquery.min.js?v=${Date.now()}`)
 			script(src=`${baseDir}js/vendor.js?v=${Date.now()}`)
 			script(src=`${baseDir}js/main.js?v=${Date.now()}`)
 		block body-end

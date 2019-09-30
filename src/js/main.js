@@ -58,7 +58,7 @@ $(function() {
 
 
   $('[data-typer-targets]').typer({
-
+    highlightColor: 'rgba(0, 0, 0, 0)'
     // highlightSpeed    : 20,
     // typeSpeed         : 100,
     // clearDelay        : 500,

@@ -322,6 +322,10 @@
 
 .btn-outline-black {
 	border: 1px solid #515151;
+
+  &:hover {
+    border-color: #a2274a;
+  }
 }
 
 // .btn-white-outline {

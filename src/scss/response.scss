@@ -6,3 +6,16 @@
 		font-size: 12px;
 	} 
 }
+
+@media (max-width: 450px) {
+  .btn_width_190 {
+    width: 13.625rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .btn_width_190 {
+    padding: 1rem 5px;
+    width: 10rem;
+  }
+}

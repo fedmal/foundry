@@ -135,12 +135,28 @@ $(function() {
 
   $('.help-feedback-form__btn').on('click', toggleForm);
 
+
+
+
   function toggleForm (e) {
     
     if($('.help-feedback__slide').is(':hidden')) {
       e.preventDefault()
+
+
+      var el = $(this);
+      var swap = el.data("swap");
+      var text = el.data("text");
+      el.data("text", swap);
+      el.data("swap", text);
+      el.html(swap);
+
+
       $('.help-feedback__slide').slideToggle();
       $(this).off('click', toggleForm)
+
+
+
     }
     
   }

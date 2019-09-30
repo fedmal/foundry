@@ -45,4 +45,26 @@
   .logos {
     padding-top: 0;
   }
+
+  .btn {
+    font-size: 20px;
+    max-width: 100%;
+  }
+
+  .btn-all {
+    width: 464px;
+    min-width: initial;
+  }
+
+  .btn_width_190 {
+    width: 250px;
+    min-width: initial;
+  }
+}
+
+@media (max-width: 400px) {
+  .btn_width_190 {
+    padding: 1rem 5px;
+    width: 10rem;
+  }
 }

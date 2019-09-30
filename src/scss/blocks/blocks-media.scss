@@ -64,6 +64,10 @@
   .work-box__view {
     display: none;
   }
+
+  .work-box__image:hover img {
+    transform: none;
+  }
 }
 
 @media (max-width: 500px) {

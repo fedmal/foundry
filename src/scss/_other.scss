@@ -541,31 +541,34 @@
 	height: 55px;
 	border: 1px solid #e4e4e4;
 	padding: 15px 23px;
-	font-size: 15px; 
+	font-size: 17px; 
 	box-shadow: none!important;  
 	color: #335168;
+	&:hover, &:active, &:focus {
+		border: 1px solid #e4e4e4;
+	}
 	@include max-lg {
 		margin-bottom: 25px;
 	}
 	&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 	  color: #676767;
 	  opacity: 1; 
-	  font-size: 17px;
 	}
 	&::-moz-placeholder { /* Firefox 19+ */
 	  color: #676767;
 	  opacity: 1;
-	  font-size: 17px;
 	}
 	&:-ms-input-placeholder { /* IE 10+ */
 	  color: #676767;
 	  opacity: 1;
-	  font-size: 17px;
 	}
 	&:-moz-placeholder { /* Firefox 18- */
 	  color: #676767;
 	  opacity: 1;
-	  font-size: 17px;
+	}
+	@include max-lg {
+		font-size: 20px;
+		height: 60px;
 	}
 }
 

@@ -814,9 +814,9 @@ a {
     display: none;
   }
   @include max-sm {
-    max-width: 500px;
-    padding-left: 30px;
-    padding-right: 30px;
+    // max-width: 500px;
+    // padding-left: 30px;
+    // padding-right: 30px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -1042,26 +1042,21 @@ a {
   .form-control {
     background-color: #fff!important;
     border: 1px solid #aeaeae;
-    font-size: 18px;
     &::-webkit-input-placeholder { 
       color: #9a9a9a;
       opacity: 1; 
-      font-size: 18px;
     }
     &::-moz-placeholder { 
       color: #9a9a9a;
       opacity: 1;
-      font-size: 18px;
     }
     &:-ms-input-placeholder { 
       color: #9a9a9a;
       opacity: 1;
-      font-size: 18px;
     }
     &:-moz-placeholder {
       color: #9a9a9a;
       opacity: 1;
-      font-size: 18px;
     }
   }
   textarea.form-control {
@@ -1117,6 +1112,9 @@ a {
       margin-left: 10px;
       position: relative;
       top: 2px;
+      @include min-lg {
+        display: none;
+      }
     }
   }
 }

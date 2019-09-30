@@ -1196,6 +1196,10 @@ a {
   }
 }
 
+.slick-loading .slick-list {
+  background-image: url('../images/spinner.gif');
+}
+
 span.wpcf7-not-valid-tip {
   display: none;
 }

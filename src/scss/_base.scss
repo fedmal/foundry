@@ -474,6 +474,27 @@ a {
   z-index: 1;
 }
 
+.hero__btns {
+  @include max-sm {
+    max-width: 90%;
+    width: 100%;
+    display: flex;
+    li {
+      flex: 1;
+      .btn {
+        width: 100%;
+      }
+      & + li {
+        margin-left: 15px;
+      }
+    }
+  }
+  @include max-xs {
+    max-width: none;
+    // padding-right: 10px;
+  }
+}
+
 .services {
   .container {
     @include min-xl {
